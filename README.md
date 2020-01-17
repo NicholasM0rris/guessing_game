@@ -6,4 +6,8 @@
 
  The game was made for the Assistant project currently still a WIP
  <h2> Example game </h2>
+ 
+ 
+ 
+ 
  ![](support/example.PNG)
