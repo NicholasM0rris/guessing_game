@@ -12,9 +12,9 @@ count = 0
 def speak(text):
     global count
     speech = gTTS(text=text, lang=language, slow=False)
-    speech.save(f'speech{count % 3}.mp3')
+    speech.save(f'support/speech{count % 3}.mp3')
     mixer.init()
-    mixer.music.load(f'speech{count % 3}.mp3')
+    mixer.music.load(f'support/speech{count % 3}.mp3')
     mixer.music.play()
     # p = vlc.MediaPlayer(f"support/speech{count % 3}.mp3")
     # p.play()
