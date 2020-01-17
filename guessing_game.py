@@ -1,6 +1,8 @@
 import sys
 from support.sprecognition import recognise_audio
 import random
+from support.tts import speak
+import os
 
 """
 A guessing game where the player must guess the correct word.
@@ -12,14 +14,23 @@ class GuessGame:
     def __init__(self):
         self.words = {}
         self.guess = None
-        self.path = 'Lisbeth/guessing_game/words.txt'
+        self.path = 'support/words.txt'
         self.current_word = None
         self.index = 0
+        to_say = "Hello! Welcome to my guessing game."
+        print(to_say)
+        speak(to_say)
         self.play_game()
 
     def get_guess(self):
         self.guess = recognise_audio()
-        print("Registered guess: ", self.guess)
+        try:
+            to_speak = "Registered guess: " + self.guess
+            print(to_speak)
+            speak(to_speak)
+        except TypeError:
+            pass
+
         # failed to get user response
         if not self.guess:
             return False
@@ -48,27 +59,39 @@ class GuessGame:
         self.choose_word()
         while True:
             if self.index >= 5:
-                print("DA DUN. YOU LOSE!")
+                to_speak = "DA DUN. YOU LOSE! The correct word was {}".format(self.current_word)
+                print(to_speak)
+                speak(to_speak)
                 return False
-
-            print('Guess the word: (You have {} attempts remaining)'.format(5-self.index))
-            print(self.words[self.current_word][self.index])
+            to_speak = 'Guess the word: (You have {} attempts remaining)'.format(5 - self.index)
+            print(to_speak)
+            speak(to_speak)
+            to_speak = self.words[self.current_word][self.index]
+            print(to_speak)
+            speak(to_speak)
             while not self.get_guess():
-                print("Sorry, I missed that. Please try again!")
+                to_speak = "Sorry, I missed that. Please try again!"
+                print(to_speak)
+                speak(to_speak)
 
             if self.check_guess():
-                print("Correct! You Winner!")
+                to_speak = "Correct! You Winner!"
+                print(to_speak)
+                speak(to_speak)
                 return True
             else:
                 self.index += 1
-                print('WRONG!!!!!!')
-
+                to_speak = 'WRONG!!!!!!'
+                print(to_speak)
+                speak(to_speak)
 
 
 def main(arglist):
+    sys.stdout = open(os.devnull, "w")
+    sys.stderr = open(os.devnull, "w")
+    sys.stdout = sys.__stdout__
+    sys.stderr = sys.__stderr__
     game = GuessGame()
-
-
 
 
 if __name__ == '__main__':

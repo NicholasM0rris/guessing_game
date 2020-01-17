@@ -1,0 +1,36 @@
+Word: Apple
+Hint: I am thinking of something red.
+Hint: It is physical, and you can touch it.
+Hint: It can fit in the palm of your hand.
+Hint: You can eat it. It is usually crunchy.
+Hint: I am thinking of a fruit.
+Word: Car
+Hint: I am thinking of something that is large. It is usually larger than a person.
+Hint: It is physical, you can touch it.
+Hint: It can travel at high speeds.
+Hint: It can be used. You have probably used one before.
+Hint: It is used to transport things.
+Word: Fish
+Hint: I am thinking of something you can touch
+Hint: You can eat it
+Hint: It is a living thing (Unless it dies of course)
+Hint: Some people keep them as a pet
+Hint: It can swim, and lives in water
+Word: Tree
+Hint: I am thinking of something you can touch.
+Hint: It is a living thing, and its size varies.
+Hint: You can keep them at your home.
+Hint: It has many uses, from construction to creating shade.
+Hint: I am thinking of a type of flora.
+Word: Money
+Hint: It is something you can touch, and also not touch
+Hint: It is small enough to fit in you pocket in physical form
+Hint: It can be made of different materials
+Hint: It has many uses in human society
+Hint: It is about 5 inches long, and drives women crazy
+Word: Nick
+Hint: The coolest person in the universe
+Hint: The super coolest person in the universe
+Hint: The super duper coolest person in the universe
+Hint: The super duper coolest awesomest person in the universe
+Hint: The super duper coolest awesomest sexiest person in the universe
