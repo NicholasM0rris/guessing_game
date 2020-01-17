@@ -1,3 +1,6 @@
 /.idea
 /venv
 /support/__pycache__
+/support/speech0.mp3
+/support/speech2.mp3
+/support/speech1.mp3
